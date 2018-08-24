@@ -4,3 +4,6 @@ pipeline:
     commands:
       - npm install
       - npm test
+services:
+  database:
+    image: mongo
