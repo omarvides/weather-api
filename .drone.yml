@@ -1,13 +1,18 @@
 pipeline:
   backend:
     image: node
+    environment:
+      - DB_HOST=mongo
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_PORT=27017
     commands:
       - sleep 20
       - npm install
       - npm test
 services:
   database:
-    image: mongo
+    image: mongo:3
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=root
