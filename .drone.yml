@@ -10,6 +10,7 @@ pipeline:
       - sleep 20
       - npm install
       - npm test
+      - npm run integration
 services:
   database:
     image: mongo:3
