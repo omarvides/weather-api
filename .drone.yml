@@ -2,6 +2,7 @@ pipeline:
   backend:
     image: node
     commands:
+      - sleep 20
       - npm install
       - npm test
 services:

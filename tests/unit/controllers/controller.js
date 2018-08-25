@@ -1,5 +1,5 @@
 const chai = require('chai');
-const controllers = require('../../controllers/controllers');
+const controllers = require('../../../controllers/controllers');
 
 const expect = chai.expect;
 
@@ -12,9 +12,9 @@ describe('controllers', () => {
         },
         get(callback) {
           return callback();
-        }
-      }
-      const controllerObject  = controllers.configure(model);
+        },
+      };
+      const controllerObject = controllers.configure(model);
       expect(controllerObject).to.be.an.instanceOf(Object);
     });
   });
